@@ -19,6 +19,7 @@ flowchart LR
     E -->|services| L[LLM]
 
     G[Graph Builder] -.->|used by| B
+    G -.->|save to| C
     User --> T[Chat]
     F[Agentical] -.->|part of| T
     T -.->|converse| L
