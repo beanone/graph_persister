@@ -9,19 +9,20 @@ Graph Persister is a lightweight Python utility for persisting hierarchical Stoc
 This utility is a key part of a modular pipeline for graph-based semantic applications:
 
 ```mermaid
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 20}} }%%
 flowchart LR
-    A[Graph Explorer/Creator] -- generates pickle --> B[Graph Persister - this utility]
-    B -- persists via graph_builder API --> C[Graph DB with indices]
-    C -- read by --> D[Graph Reader API - FastAPI]
-    D -- wrapped by --> E[FastApiMCP]
-    E -- enables --> F[Agentical]
-    F -- integrates with --> G[LLM Semantic Conversation]
+    A[Explorer] --> B[Persister]
+    B --> C[Graph DB]
+    C --> D[Reader API]
+    D --> E[MCP]
+    E --> F[Agentical]
+    F --> G[LLM]
 
-    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#fff,stroke:#111,stroke-width:2px,color:#111
 ```
 
 **Legend:**
-- The <span style="background-color:#f9f;">highlighted</span> node is this utility.
+- The <span style="background-color:#fff;color:#111">highlighted</span> node is this utility.
 - The pipeline shows how a graph is created, persisted, indexed, served, and ultimately made accessible to LLMs for semantic conversation via MCP and Agentical.
 
 ---
