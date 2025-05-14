@@ -23,7 +23,9 @@ flowchart LR
     User --> T[Chat]
     F[Agentical] -.->|part of| T
     T -.->|converse| L
-    F -.->|coordinates| L    
+    F -.->|coordinates| L
+    M[Locksmitha] -.->|auth for| D
+    N[keylin] -.->|userDB for| M
 
     style B fill:#fff,stroke:#111,stroke-width:2px,color:#111
     style G fill:#f0f0f0,stroke:#666,stroke-width:1px,color:#333
