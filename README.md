@@ -25,6 +25,7 @@ flowchart LR
     T -.->|converse| L
     F -.->|coordinates| L
     M[Locksmitha] -.->|auth for| D
+    M -.->|auth for| E
     N[keylin] -.->|userDB for| M
 
     style B fill:#fff,stroke:#111,stroke-width:2px,color:#111
