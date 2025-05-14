@@ -11,7 +11,8 @@ This utility is a key part of a modular pipeline for graph-based semantic applic
 ```mermaid
 %%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 20}} }%%
 flowchart LR
-    A[Explorer] --> B[Persister]
+    A[Graph Explorer] --> G[Graph Pickle]
+    G --> B[Persister]
     B --> C[Graph DB]
     C --> D[Reader API]
     D -->|wrapped by| E[MCP]
