@@ -18,7 +18,7 @@ flowchart LR
     E --> F[Agentical]
     F --> L[LLM]
 
-    G[Graph Builder API] -.->|used by| B
+    G[Graph Builder] -.->|used by| B
 
     style B fill:#fff,stroke:#111,stroke-width:2px,color:#111
     style G fill:#f0f0f0,stroke:#666,stroke-width:1px,color:#333
