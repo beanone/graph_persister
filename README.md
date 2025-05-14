@@ -13,16 +13,15 @@ This utility is a key part of a modular pipeline for graph-based semantic applic
 flowchart LR
     A[Explorer] --> B[Persister]
     B --> C[Graph DB]
-    C --> T[Chat]
-    T --> L[LLM]
+    C --> D[Reader API]
+    D -->|wrapped by| E[MCP]
+    E -->|services| L[LLM]
 
     G[Graph Builder] -.->|used by| B
+    User --> T[Chat]
     F[Agentical] -.->|part of| T
-    F -.->|coordinates| L
-    E[MCP] -.->|services| L
-    D[Reader API] -.->|wrapped by| MCP
-    
-    
+    T -.->|converse| L
+    F -.->|coordinates| L    
 
     style B fill:#fff,stroke:#111,stroke-width:2px,color:#111
     style G fill:#f0f0f0,stroke:#666,stroke-width:1px,color:#333
